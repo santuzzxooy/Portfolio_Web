@@ -1,0 +1,192 @@
+@font-face {
+  font-family: face;
+  src: url("../assets/JLSSpaceGothicC_NC.otf");
+  font-optical-sizing: auto;
+}
+
+.header {
+  font-family: face;
+  overflow: hidden;
+  width: 100%;
+  height: 90px;
+  top: 0px;
+  position: relative;
+  display: flex;
+  z-index: 100;
+  background-color: rgb(0, 0, 0);
+  user-select: none;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.header ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.header ul li {
+  display: inline-block;
+  position: relative;
+}
+
+.header ul li a {
+  display: inline-block;
+  text-align: center;
+  border: 1px solid;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  margin-bottom: 12px;
+  margin-left: 15px;
+  color: rgb(255, 255, 255);
+}
+
+.header ul li:last-child a {
+  margin-right: 30px;
+}
+
+.header h1 {
+  float: left;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  text-decoration: none;
+  font-size: 27px;
+  padding-left: 15px;
+}
+
+.imgLogo {
+  height: 70px;
+  float: left;
+  background-color: white;
+  border-radius: 50px;
+  text-decoration: none;
+}
+
+/* Change the background color on mouse-over */
+.normal:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.ultimo:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* button */
+.header a.active {
+  background-color: rgb(146, 0, 0);
+  color: rgb(0, 0, 0);
+}
+
+.header a.active:hover {
+  box-shadow: 0 0 5px rgb(146, 0, 0),
+  0 0 25px rgb(146, 0, 0),
+  0 0 50px rgb(146, 0, 0);
+  background-color: rgb(0, 0, 0);
+  color: rgb(146, 0, 0);
+}
+
+.checkbtn {
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  color: rgb(255, 255, 255);
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+@media (max-width: 952px){
+  .logo {
+    font-size: 30px;
+    padding-left: 50px;
+  }
+  .header a{
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 858px){
+  .checkbtn {
+    display: block;
+  }
+
+  .header ul {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.795);
+    backdrop-filter: blur(10px);
+    top: 85px;
+    right: -115%;
+    text-align: center;
+    transition: all 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px; /* Espacio entre botones */
+  }
+
+  .header a.active {
+    background-color: rgb(0, 0, 0);
+    color: rgb(146, 0, 0);
+    border: 2px solid rgb(146, 0, 0);
+  }
+
+  .header ul li {
+    width: 80%; /* Ancho de cada botón */
+    background-color: rgba(0, 0, 0, 0.178);
+    backdrop-filter: blur(5px);
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+
+  .header ul li a {
+    width: 88%;
+    height: 70%;
+    display: flex;         /* Convierte el enlace en un contenedor flexible */
+    align-items: center;   /* Centra verticalmente el texto */
+    justify-content: center; /* Centra horizontalmente el texto */
+    text-align: center; 
+    border: 2px solid rgb(146, 0, 0);
+    font-size: 25px; /* Tamaño más grande para móviles */
+    background-color: rgb(0, 0, 0);
+  }
+
+  #check:checked ~ ul {
+    right: 0;
+  }
+}
+
+@media (max-width: 480px){
+  .imgLogo {
+    height: 40px;
+  }
+  h1 {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 418px){
+  .imgLogo {
+    height: 26px;
+  }
+  h1 {
+    font-size: 18px;
+  }
+}
