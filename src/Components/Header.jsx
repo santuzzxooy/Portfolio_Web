@@ -6,10 +6,8 @@ const Header = () => {
     return (
         <nav className="header">
             <div className='logo-container'>
-                <a to="#" className="logo">
-                    <img src={foto} alt='?' className="imgLogo" />
-                    <h1>Josefth Santiago Rocha</h1>
-                </a>
+                <img src={foto} alt='?' className="imgLogo" />
+                <h1>Josefth Santiago Rocha</h1>
             </div>
             <input type="checkbox" id="check" />
             <label htmlFor="check" className='checkbtn'>
