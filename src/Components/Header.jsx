@@ -9,15 +9,15 @@ const Header = () => {
                 <img src={foto} alt='?' className="imgLogo" />
                 <h1>Josefth Santiago Rocha</h1>
             </div>
-            <input type="checkbox" id="check" />
-            <label htmlFor="check" className='checkbtn'>
+            <input type="checkbox" id="check_menu" />
+            <label htmlFor="check_menu" className='checkbtn'>
                 <IoMdArrowDropleftCircle />
             </label>
             <ul>
-                <li><a to="/#">P.I</a></li>
-                <li><a to="/#">Studies</a></li>
-                <li><a to="#">Experience</a></li>
-                <li><a to="#">Projects</a></li>
+                <li><label htmlFor="check_menu"><a to="/#">P.I</a></label></li>
+                <li><label htmlFor="check_menu"><a to="/#">Studies</a></label></li>
+                <li><label htmlFor="check_menu"><a to="#">Experience</a></label></li>
+                <li><label htmlFor="check_menu"><a to="#">Projects</a></label></li>
             </ul>
         </nav>
     )

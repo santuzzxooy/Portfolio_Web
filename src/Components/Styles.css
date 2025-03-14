@@ -1,23 +1,22 @@
 @font-face {
   font-family: face;
   src: url("../assets/JLSSpaceGothicC_NC.otf");
-  font-optical-sizing: auto;
 }
 
 .header {
   font-family: face;
   overflow: hidden;
-  width: 100%;
+  width: 100vw;
   height: 90px;
+  position: fixed;
   top: 0;
-  position: relative;
+  left: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 100;
   background-color: rgb(0, 0, 0);
   user-select: none;
-  padding: 0 20px;
+  z-index: 1000;
 }
 
 .logo-container {
@@ -26,6 +25,7 @@
   align-items: center;
   gap: 10px;
   white-space: nowrap;
+  margin-left: 10px;
 }
 
 .imgLogo {
@@ -87,8 +87,7 @@
   display: none;
 }
 
-
-#check {
+#check_menu {
   display: none;
 }
 
@@ -121,15 +120,10 @@
     gap: 30px;
   }
 
-  .header a.active {
-    background-color: rgb(0, 0, 0);
-    color: rgb(146, 0, 0);
-    border: 2px solid rgb(146, 0, 0);
-  }
-
   .header ul li {
     width: 80%;
     background-color: rgba(0, 0, 0, 0.178);
+    border: 2px solid rgba(255, 255, 255, 0.171);
     backdrop-filter: blur(5px);
     border-radius: 5px;
     margin-top: 20px;
@@ -142,12 +136,12 @@
     align-items: center;
     justify-content: center;
     text-align: center; 
-    border: 2px solid rgb(146, 0, 0);
+    border: 2px solid rgb(255, 255, 255);
     font-size: 25px;
     background-color: rgb(0, 0, 0);
   }
 
-  #check:checked ~ ul {
+  #check_menu:checked ~ ul {
     right: 0;
   }
 }
