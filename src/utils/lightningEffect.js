@@ -35,7 +35,7 @@ export default function lightningEffect(canvasRef, bannerRef) {
                 lastY = newY;
             }
 
-            let colors = ["rgba(255, 255, 255, 0.7)", "rgba(173, 216, 230, 0.7)"];
+            let colors = ["rgba(22, 21, 116, 0.7)", "rgba(173, 216, 230, 0.7)"];
             ctx.strokeStyle = colors[j % colors.length];
             ctx.lineWidth = 2;
             ctx.shadowBlur = 15;

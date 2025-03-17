@@ -1,7 +1,8 @@
 import './App.css'
 import Header from './Components/Header'
-import PersonalInfo from './Components/PersonalInfo'
 import Banner from './Components/Banner'
+import PersonalInfo from './Components/PersonalInfo'
+import Footer from './Components/Footer'
 
 function App() {
 
@@ -10,6 +11,7 @@ function App() {
       <Header/>
       <Banner/>
       <PersonalInfo/>
+      <Footer/>
     </>
   )
 }

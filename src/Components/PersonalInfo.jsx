@@ -5,7 +5,7 @@ const PersonalInfo = () => {
     return (
         <div className="card">
             <img src={foto} alt="Avatar" />
-            <div className="container">
+            <div className="card_container">
                 <h4><b>John Doe</b></h4>
                 <p>Architect & Engineer</p>
             </div>

@@ -1,10 +1,14 @@
 import './Styles.css'
+import useScrollHeader from "../utils/useScrollHeader";
 import foto from '../assets/foto.png'
 import { IoMdArrowDropleftCircle } from "react-icons/io";
 
 const Header = () => {
+
+    const isScrolled = useScrollHeader();
+
     return (
-        <nav className="header">
+        <nav className={`header ${isScrolled ? "scrolled" : ""}`}>
             <div className='logo-container'>
                 <img src={foto} alt='?' className="imgLogo" />
                 <h1>Josefth Santiago Rocha</h1>
