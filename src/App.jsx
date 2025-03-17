@@ -1,17 +1,24 @@
 import './App.css'
 import Header from './Components/Header'
 import Banner from './Components/Banner'
-import PersonalInfo from './Components/PersonalInfo'
+import CardsContainer from './Components/CardsContainer'
+import DescriptionCard from './Components/DescriptionCard'
 import Footer from './Components/Footer'
+import ScrollToTop from './Components/ScrollToTop'
+import { RefsProvider } from "./utils/RefsContext";
 
 function App() {
 
   return (
     <>
-      <Header/>
-      <Banner/>
-      <PersonalInfo/>
-      <Footer/>
+      <RefsProvider>
+        <Header />
+        <Banner />
+        <CardsContainer />
+        <DescriptionCard />
+        <ScrollToTop />
+        <Footer />
+      </RefsProvider>
     </>
   )
 }

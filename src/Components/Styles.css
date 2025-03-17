@@ -1,19 +1,19 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  overflow-x: hidden;
-}
-
 @font-face {
   font-family: face;
   src: url("../assets/JLSSpaceGothicC_NC.otf");
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: face;
+}
+
 /* Header style */
 
 .header {
-  font-family: face;
   overflow: hidden;
   width: 100vw;
   height: 90px;
@@ -103,6 +103,7 @@
 }
 
 /* Estilos cuando el usuario hace scroll */
+
 .header.scrolled {
   background-color: rgba(94, 94, 94, 0.384);
 }
@@ -135,7 +136,6 @@
 }
 
 .banner_area {
-  font-family: face;
   position: relative;
   width: 100vw;
   height: 100vh;
@@ -212,23 +212,155 @@
 
 /* Card Style */
 
-.card {
-  font-family: face;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  transition: 0.3s;
-  margin-top: 90px;
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
 }
 
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+/* Estilos de la tarjeta */
+.PI_card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 45%;  /* Ajuste para mejor adaptación */
+  max-width: 600px;
+  min-width: 300px;
 }
 
-.card_container {
-  padding: 2px 16px;
+/* Imagen del perfil */
+.profile-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 3px solid #333;
+  background-color: #000000;
+  object-fit: cover;
 }
+
+/* Textos */
+.PI_card h2 {
+  margin-top: 10px;
+  font-size: 24px;
+  color: #333;
+}
+
+.job-title {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.info p {
+  font-size: 16px;
+  color: #444;
+  margin: 5px 0;
+}
+
+.info a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.info a:hover {
+  text-decoration: underline;
+}
+
+/* Lista de habilidades */
+.skills-list {
+  list-style: none;
+  padding: 0;
+}
+
+.skills-list li {
+  font-size: 16px;
+  color: #444;
+  margin: 8px 0;
+  text-align: left;
+}
+
+/* 📌 RESPONSIVE */
+
+/* 🟢 Ajuste para tablets */
+@media (max-width: 768px) {
+  .PI_card {
+    width: 90%; /* Ocupar más espacio en pantallas pequeñas */
+  }
+}
+
+/* 🔵 Ajuste para móviles */
+@media (max-width: 400px) {
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .PI_card {
+    width: 100%; /* Ocupar todo el ancho en móviles */
+  }
+}
+
+
+
+/* description Container */
+
+.description_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin-top: -15px;
+}
+
+.description_card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Title */
+.description_card h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* Descriptive paragraphs */
+.description_card p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.5;
+  text-align: justify;
+  margin-bottom: 10px;
+}
+
+/* Responsive for tablets and mobile */
+@media (max-width: 768px) {
+  .description_card {
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  .description_card h2 {
+    font-size: 22px;
+  }
+
+  .description_card p {
+    font-size: 16px;
+  }
+}
+
+/* footer styles */
 
 footer {
-  color: #666;
+  color: #ffffff;
   background: #222;
   padding: 17px 0;
   border-top: 1px solid #000;
@@ -246,12 +378,12 @@ footer {
 }
 
 footer a {
-  color: #999;
+  color: #ff0000;
   text-decoration: none;
 }
 
 footer a:hover {
-  color: #efefef;
+  color: #001aff;
 }
 
 @media (max-width: 767px) {
@@ -261,6 +393,36 @@ footer a:hover {
     padding-right: 20px;
   }
 }
+
+/* Boton de subir */
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 10px 13px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 24px;
+  text-align: center;
+  border: 3px solid #000000;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.scroll-to-top.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.scroll-to-top:hover {
+  background-color: #000000;
+  color: white;
+  border: 3px solid #ffffff;
+}
+
 
 /* Dynamic views */
 
@@ -309,7 +471,7 @@ footer a:hover {
 
   .header ul li a {
     width: 88%;
-    height: auto; /* ✅ Evita que el enlace tenga una altura fija */
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -317,8 +479,8 @@ footer a:hover {
     border: 2px solid rgb(255, 255, 255);
     font-size: 25px;
     background-color: rgb(0, 0, 0);
-    padding: 15px 0; /* ✅ Agrega espacio sin forzar la altura */
-    text-decoration: none; /* ✅ Evita estilos no deseados en enlaces */
+    padding: 15px 0;
+    text-decoration: none;
   }
 
   #check_menu:checked~ul {
