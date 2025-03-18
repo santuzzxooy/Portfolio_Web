@@ -282,36 +282,65 @@
 }
 
 /* Lista de habilidades */
-.skills-list {
+/* 🔷 Contenedor de Secciones */
+.skills_container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 10px;
+}
+
+/* 🔷 Secciones de Frontend y Backend */
+.skills_section {
+  flex: 1;
+  text-align: left;
+}
+
+/* 🔷 Estilos de los títulos (Frontend / Backend) */
+.skills_section h3 {
+  font-size: 18px;
+  color: #007bff;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+/* 🔷 Lista de Habilidades */
+.skills_list {
   list-style: none;
   padding: 0;
 }
 
-.skills-list li {
+.skills_list li {
   font-size: 16px;
   color: #444;
   margin: 8px 0;
-  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-/* 📌 RESPONSIVE */
+/* 📌 RESPONSIVE DESIGN */
 
-/* 🟢 Ajuste para tablets */
+/* 🟢 Ajustes para Tablets */
 @media (max-width: 768px) {
   .PI_card {
-    width: 90%; /* Ocupar más espacio en pantallas pequeñas */
+    width: 90%;
   }
-}
 
-/* 🔵 Ajuste para móviles */
-@media (max-width: 400px) {
-  .cards-container {
+  .skills_container {
     flex-direction: column;
     align-items: center;
   }
 
+  .skills_section {
+    width: 100%;
+  }
+}
+
+/* 🔵 Ajustes para Móviles */
+@media (max-width: 400px) {
   .PI_card {
-    width: 100%; /* Ocupar todo el ancho en móviles */
+    width: 100%;
   }
 }
 
@@ -319,55 +348,167 @@
 
 /* description Container */
 
+/* Contenedor Principal */
 .description_container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  padding: 20px;
-  margin-top: -16px;
+  padding: 40px 20px;
 }
 
-.description_card {
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  padding: 50px;
+.description_container h1 {
+  font-size: 45px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+/* Grid para organizar las tecnologías */
+.description_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
   width: 100%;
+  justify-items: center;
+}
+
+/* Estilos de la Tarjeta */
+.description_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f8f8f8;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 180px;
   text-align: center;
 }
 
-/* Title */
-.description_card h2 {
+.tech_icon {
+  font-size: 40px;
+  color: #000000;
+  margin-bottom: 8px;
+}
+
+.description_card h3 {
+  font-size: 16px;
   color: #333;
-  font-size: 24px;
   margin-bottom: 10px;
 }
 
-/* Descriptive paragraphs */
-.description_card p {
-  font-size: 18px;
-  color: #555;
-  line-height: 1.5;
-  text-align: justify;
-  margin-bottom: 10px;
+/* Barra de progreso */
+.progress_bar {
+  width: 100%;
+  height: 8px;
+  background: #ddd;
+  border-radius: 4px;
+  overflow: hidden;
 }
 
-/* Responsive for tablets and mobile */
+.progress_fill {
+  height: 100%;
+  background: #000000;
+  transition: width 0.5s ease-in-out;
+}
+
+/* Número del porcentaje debajo de la barra */
+.progress_percentage {
+  font-size: 14px;
+  color: #333;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-  .description_card {
-    max-width: 90%;
-    padding: 15px;
-  }
-
-  .description_card h2 {
-    font-size: 22px;
-  }
-
-  .description_card p {
-    font-size: 16px;
+  .description_grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   }
 }
 
+@media (max-width: 480px) {
+  .description_card {
+    max-width: 140px;
+  }
+
+  .tech_icon {
+    font-size: 35px;
+  }
+
+  .progress_bar {
+    height: 6px;
+  }
+}
+
+
+
+/* techroller */
+
+.technologies-container {
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  background: transparent;
+}
+
+.technologies-slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Doble pista para desplazamiento continuo */
+.technologies-track {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  width: max-content; /* Hace que la pista se expanda automáticamente */
+  flex-wrap: nowrap;
+  animation: scroll 30s linear infinite;
+}
+
+/* Estilos de los iconos */
+.tech-icon {
+  font-size: 60px;
+  color: #fff;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Animación infinita sin cortes */
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .tech-icon {
+    font-size: 50px;
+  }
+
+  .technologies-track {
+    gap: 40px;
+    animation-duration: 35s;
+  }
+}
+
+@media (max-width: 480px) {
+  .tech-icon {
+    font-size: 40px;
+  }
+
+  .technologies-track {
+    gap: 30px;
+    animation-duration: 40s;
+  }
+}
 
 /* Valores Card */
 

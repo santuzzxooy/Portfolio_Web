@@ -12,7 +12,7 @@ const CardsContainer = () => {
 
   return (
     <div ref={PIRef}>
-      <h1 className="PI_title">Personal Info</h1>
+      <h1 className="PI_title">Professional Info</h1>
     <div className="cards-container" >
       <PersonalCard />
       <SkillsCard />
