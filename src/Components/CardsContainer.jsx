@@ -11,9 +11,12 @@ const CardsContainer = () => {
   const { PIRef } = useContext(RefsContext);
 
   return (
-    <div className="cards-container" ref={PIRef}>
+    <div ref={PIRef}>
+      <h1 className="PI_title">Personal Info</h1>
+    <div className="cards-container" >
       <PersonalCard />
       <SkillsCard />
+    </div>
     </div>
   );
 };
