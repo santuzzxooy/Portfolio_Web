@@ -3,7 +3,7 @@ import { RefsContext } from "../utils/RefsContext";
 import './Styles.css'
 import useScrollHeader from "../utils/useScrollHeader";
 import foto from '../assets/foto.png'
-import { IoMdArrowDropleftCircle } from "react-icons/io";
+import { FaAngleLeft } from "react-icons/fa";
 
 const Header = () => {
     const isScrolled = useScrollHeader();
@@ -25,7 +25,7 @@ const Header = () => {
             
             <input type="checkbox" id="check_menu" />
             <label htmlFor="check_menu" className='checkbtn'>
-                <IoMdArrowDropleftCircle />
+                <FaAngleLeft />
             </label>
 
             <ul>

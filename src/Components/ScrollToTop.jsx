@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import "./Styles.css";
-import { FaRegArrowAltCircleUp } from "react-icons/fa";
+import { FaAngleUp } from "react-icons/fa";
 
 const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -31,7 +31,7 @@ const ScrollToTop = () => {
       className={`scroll-to-top ${isVisible ? "show" : ""}`}
       onClick={scrollToTop}
     >
-      <FaRegArrowAltCircleUp />
+      <FaAngleUp />
     </button>
   );
 };

@@ -4,7 +4,7 @@ import Banner from './Components/Banner'
 import CardsContainer from './Components/CardsContainer'
 import DescriptionCard from './Components/DescriptionCard'
 import TechRoller from './Components/TechRoller'
-import ValoresCard from './Components/ValoresCard'
+import ServicesCard from './Components/ServicesCard'
 import StudiesCard from './Components/StudiesCard'
 import Footer from './Components/Footer'
 import ScrollToTop from './Components/ScrollToTop'
@@ -39,7 +39,7 @@ function App() {
         <CardsContainer />
         <DescriptionCard />
         <TechRoller />
-        <ValoresCard />
+        <ServicesCard />
         <StudiesCard />
         <ScrollToTop />
         <Footer />
