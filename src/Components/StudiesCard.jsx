@@ -6,6 +6,7 @@ import Sena from "../assets/Sena.png";
 import MisionTic from "../assets/MisionTic.png";
 import DevSenior from "../assets/DevSenior.jpg";
 import { FaHeart } from "react-icons/fa";
+import { CiHeart } from "react-icons/ci";
 
 const StudiesCard = () => {
   const { StudiesRef } = useContext(RefsContext);
@@ -13,7 +14,7 @@ const StudiesCard = () => {
   return (
     <div className="studies_container" ref={StudiesRef}>
       <h2 className="studies_title">My Studies</h2>
-      <p className="studies_subtitle">Systems Engineer in Process</p>
+      <p className="studies_subtitle">Systems Engineer in Process <CiHeart /></p>
 
       {/* 🔥 Ahora todos los .study_item están dentro de un solo .studies_card */}
       <div className="studies_card">
@@ -62,6 +63,7 @@ const StudiesCard = () => {
           <p className="study_years">2024 - 2024</p>
         </div>
       </div>
+      <h3>There is much to come!!! I promise you, I promise me</h3>
     </div>
   );
 };

@@ -6,6 +6,7 @@ import DescriptionCard from './Components/DescriptionCard'
 import TechRoller from './Components/TechRoller'
 import ServicesCard from './Components/ServicesCard'
 import StudiesCard from './Components/StudiesCard'
+import CareerCard from './Components/CareerCard'
 import Footer from './Components/Footer'
 import ScrollToTop from './Components/ScrollToTop'
 import { FaBolt } from "react-icons/fa";
@@ -41,6 +42,7 @@ function App() {
         <TechRoller />
         <ServicesCard />
         <StudiesCard />
+        <CareerCard />
         <ScrollToTop />
         <Footer />
       </RefsProvider>
