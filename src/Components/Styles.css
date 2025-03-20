@@ -291,7 +291,8 @@
 /* 🔷 Contenedor de Secciones */
 .services_container {
   text-align: center;
-  padding: 40px 20px;
+  padding-top: 20px;
+  margin-bottom: 0;
 }
 
 .services_container h1 {
