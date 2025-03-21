@@ -2,6 +2,8 @@ import React from "react";
 import { useContext } from "react";
 import { RefsContext } from "../utils/RefsContext";
 import "./Styles.css";
+import Proximate from "../assets/Proximate.jpg";
+import Yogurdefresa from "../assets/Yogurdefresa.png";
 import { FaBriefcase, FaGraduationCap, FaLaptopCode } from "react-icons/fa";
 
 const CareerCard = () => {
@@ -65,10 +67,10 @@ const CareerCard = () => {
             <div className="right-boxes">
                 <div className="highlight-box">+6 YEARS OF EXPERIENCE</div>
                 <a href="https://yogurdefresa.es/" target="_blank" rel="noopener noreferrer">
-                    <img className="right-box-image" src="https://scontent.fibe2-1.fna.fbcdn.net/v/t39.30808-6/305610913_757349052329638_3774503368424204894_n.png?_nc_cat=107&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=6pRfX7h1moAQ7kNvgEMv5Tn&_nc_oc=AdkuWiAJZu7goLM-_8ASS1yyj6KIiEYWc9VJ5yzNqgbjA1nPz4EXE47sJZKhOfFfvEx3DwE2GcnVDRvPyKQy5QKW&_nc_zt=23&_nc_ht=scontent.fibe2-1.fna&_nc_gid=-KQlRW00EgJ_QDyL0eHYAw&oh=00_AYHcJwQISOXu9Yk7ZPDRxZdVGtus2rHqgInLg5Hz9oddww&oe=67E1A168" alt="Yogurdefresa" />
+                    <img className="right-box-image" src={Yogurdefresa} alt="Yogurdefresa" />
                 </a>
                 <a href="https://www.proximateapps.com" target="_blank" rel="noopener noreferrer">
-                    <img className="right-box-image" src="https://play-lh.googleusercontent.com/abjJ7HprbRVlcl9B4cBm_CbYDkKtTaXhjDL0Syvj0WXcWuCPyhIHTRPeZ3zmlUZz0m7b" alt="Proximate" />
+                    <img className="right-box-image" src={Proximate} alt="Proximate" />
                 </a>
             </div>
 

@@ -244,6 +244,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-align: center;
   width: 100%;
+  background-color: #000;
   max-width: 600px;
   min-width: 300px;
 }
@@ -253,7 +254,7 @@
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  border: 3px solid #333;
+  border: 3px solid #ffffff;
   background-color: #000000;
   object-fit: cover;
 }
@@ -399,7 +400,7 @@
 .description_card {
   display: flex;
   align-items: center;
-  background: #a8a8a8;
+  background: #000000;
   padding: 15px;
   border: 3px solid #000000;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -408,11 +409,27 @@
   gap: 15px;
 }
 
-/* 🔷 Icono alineado a la izquierda */
+/* 🔥 Efecto Glow Mejorado para los iconos */
 .tech_icon {
   font-size: 50px;
-  color: #000000;
-  min-width: 60px; /* Evita que se encoja */
+  color: #ffffff;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
+  animation: glowEffect 1.5s infinite alternate;
+}
+
+/* ✨ Glow Más Fuerte al Pasar el Mouse */
+.tech_icon:hover {
+  filter: drop-shadow(0 0 20px rgba(255, 255, 255, 1));
+}
+
+/* 💡 Animación de Resplandor */
+@keyframes glowEffect {
+  0% {
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+  }
+  100% {
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 1));
+  }
 }
 
 /* 🔷 Contenedor de texto y barra */
@@ -423,7 +440,7 @@
 /* 🔷 Títulos de las tecnologías */
 .description_card h3 {
   font-size: 18px;
-  color: #333;
+  color: #ffffff;
   margin-bottom: 5px;
 }
 
@@ -445,7 +462,7 @@
 /* 🔷 Número del porcentaje */
 .progress_percentage {
   font-size: 14px;
-  color: #333;
+  color: #a7a7a7;
   font-weight: bold;
   margin-top: 5px;
 }
@@ -695,7 +712,7 @@
 /* Título del estudio */
 .study_item h3 {
   font-size: 24px;
-  color: #333;
+  color: #000000;
   margin: 10px 0;
 }
 
@@ -759,7 +776,7 @@
 
 /* Title */
 .career-title {
-  font-size: 28px;
+  font-size: 45px;
   font-weight: bold;
   color: #000;
   background-color: #fff;
@@ -767,6 +784,7 @@
   padding: 15px 30px;
   display: inline-block;
   margin-bottom: 20px;
+  user-select: none;
 }
 
 /* Each section */
@@ -800,8 +818,8 @@
   align-items: center;
 }
 
-/* Highlighted Experience Box */
 .highlight-box {
+  position: relative;
   background: #ffcc00;
   color: #000;
   font-size: 30px;
@@ -809,12 +827,38 @@
   padding: 15px;
   border-radius: 8px;
   text-align: center;
-  width: 200px;  /* Tamaño en pantallas grandes */
-  height: 200px; /* Cuadrado perfecto */
+  width: 200px;
+  height: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  user-select: none;
+}
+
+/* Línea brillante cruzando la caja */
+.highlight-box::before {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 250%;
+  height: 250%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 40%,
+    rgba(255, 255, 255, 0.8) 50%,
+    rgba(255, 255, 255, 0) 60%
+  );
+  transform: rotate(25deg);
+  animation: shine 3s infinite linear;
+}
+
+/* Animación de brillo cruzado */
+@keyframes shine {
+  0% { top: -100%; left: -100%; }
+  100% { top: 100%; left: 100%; }
 }
 
 /* Placeholder Images */

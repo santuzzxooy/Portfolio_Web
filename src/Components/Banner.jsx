@@ -26,7 +26,7 @@ const Banner = () => {
             <canvas ref={canvasRef} className="lightningCanvas"></canvas>
             <ul>
                 <li><span id="banner_text" className="banner_text"></span></li>
-                <li><a href="#" className="banner_button">Contact me</a></li>
+                <li><a href="mailto:santiagorochav@gmail.com?subject=We%20want%20you%20on%20our%20team!&body=Santiago:%20Thanks%20for%20the%20opportunity.%20Let's%20stay%20in%20touch." className="banner_button">Contact me</a></li>
             </ul>
         </div>
     );
