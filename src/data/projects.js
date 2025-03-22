@@ -23,8 +23,8 @@ const projects = [
     {
       title: "Api consumer web",
       image: "https://picsum.photos/300/170?random=5",
-      repo: "https://github.com/example/project-five",
-      live: "https://example.com/project-five",
+      repo: "https://github.com/santuzzxooy/jokes-api-consumer",
+      live: "https://santuzzxooy.github.io/jokes-api-consumer/",
       description: "Web application that consumes APIs from three different pages made in React (Vite) with HTML and CSS.",
     },
     {
