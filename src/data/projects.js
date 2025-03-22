@@ -10,7 +10,7 @@ const projects = [
       title: "Meat Boy Party",
       image: "https://i.postimg.cc/W4d8yL5q/meat-boy-party.png",
       repo: "https://github.com/santuzzxooy/MeatParty",
-      live: "https://example.com/project-four",
+      live: "https://santuzzxooy.github.io/MeatParty",
       description: "Personal website design project for underground raves within the city, made in React-Vite, HTML, and CSS.",
     },
     {

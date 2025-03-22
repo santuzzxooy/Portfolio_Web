@@ -7,15 +7,12 @@ import "./Styles.css";
 const ProjectsCard = () => {
   const { ProjectsRef } = useContext(RefsContext);
 
-  // Estado para manejar el modal
   const [selectedImage, setSelectedImage] = useState(null);
 
-  // Función para abrir el modal
   const openModal = (image) => {
     setSelectedImage(image);
   };
 
-  // Función para cerrar el modal
   const closeModal = () => {
     setSelectedImage(null);
   };
