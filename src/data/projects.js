@@ -21,8 +21,8 @@ const projects = [
       description: "A page designed to present an activity in English, using Python-Django, HTML, CSS, and MySQL.(Now disconnected for Railway limits)",
     },
     {
-      title: "Api consumer web",
-      image: "https://picsum.photos/300/170?random=5",
+      title: "Jokes Api consumer",
+      image: "https://i.postimg.cc/VkmV3v9v/jokes.png",
       repo: "https://github.com/santuzzxooy/jokes-api-consumer",
       live: "https://santuzzxooy.github.io/jokes-api-consumer/",
       description: "Web application that consumes APIs from three different pages made in React (Vite) with HTML and CSS.",
