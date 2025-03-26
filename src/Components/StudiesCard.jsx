@@ -60,7 +60,7 @@ const StudiesCard = () => {
           </a>
           <h3>Full Stack Bootcamp</h3>
           <p>Spring boot, PostgreSQL, Angular.js, IA</p>
-          <p className="study_years">2024 - 2024</p>
+          <p className="study_years">2025 - 2025</p>
         </div>
       </div>
       <h3>There is much to come!!! I promise you, I promise me</h3>

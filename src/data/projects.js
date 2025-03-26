@@ -35,7 +35,7 @@ const projects = [
       description: "Page made together to present a performance test in Proximate, made in React, the page consumes an API service.",
     },
     {
-      title: "????????",
+      title: "Company full stack app",
       image: "https://picsum.photos/300/170?random=6",
       repo: "https://github.com/example/project-six",
       live: "https://example.com/project-six",
